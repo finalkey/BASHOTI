@@ -1,0 +1,68 @@
+.sidebar{
+  background: var(--panel);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  box-shadow: var(--shadow);
+  height: 72vh;
+  min-height: 480px;
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+/* New chat button */
+.new-chat-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.03);
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Conversations list */
+.conv-list{
+  flex: 1 1 auto;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap: 8px;
+  padding-right: 6px;
+}
+
+/* Each conversation item */
+.conv-item{
+  padding: 10px;
+  border-radius: 10px;
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  cursor:pointer;
+  transition: background .12s ease;
+  background: transparent;
+}
+
+.conv-item:hover { background: var(--glass); }
+
+.conv-item.active{
+  background: linear-gradient(90deg, rgba(52,211,153,0.06), rgba(52,211,153,0.02));
+  border-left: 3px solid var(--accent-600);
+}
+
+/* avatar + text */
+.conv-avatar{
+  width:36px; height:36px; border-radius:8px; background: rgba(255,255,255,0.04);
+  display:inline-flex; align-items:center; justify-content:center; color:var(--muted);
+}
+
+.conv-title{
+  font-size:14px; font-weight:600; color:var(--text);
+}
+
+.conv-sub{
+  font-size:12px; color:var(--muted);
+}
